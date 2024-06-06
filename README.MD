@@ -1,6 +1,6 @@
 # Google Clone Todo Page
 
-[link](https://kisyam.github.io/google-clone-todo-page/)
+[link](https://mimetite.github.io/google-clone-todo-page/)
 
 ### Dark Mode
 
