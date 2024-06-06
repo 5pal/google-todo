@@ -14,7 +14,7 @@ function saveToDos() {
 function deleteToDo(event) {
     const li = event.target.parentElement.parentElement.parentElement;
     li.remove();
-    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    toDos = toDos.filter(toDo => toDo.id !== parseInt(li.id));
     saveToDos();
 }
 
@@ -55,7 +55,7 @@ function editToDo(event) {
     const editInput = document.querySelector(".todoedit-form-value");
     const editCancelBtn = document.querySelector(".todoedit-form-cancelbtn");
 
-    editForm.addEventListener("submit", (event) => {
+    editForm.addEventListener("submit", event => {
         event.preventDefault();
         if (data !== editInput.value) {
             completedEdit(event, editInput.value);
@@ -67,7 +67,7 @@ function editToDo(event) {
     editCancelBtn.addEventListener("click", () => cancelEdit());
 
     function completedEdit(event, value) {
-        toDoIndex = toDos.findIndex((todo) => todo.id === parseInt(id));
+        toDoIndex = toDos.findIndex(todo => todo.id === parseInt(id));
         toDos[toDoIndex].text = value;
         form.remove();
         li.remove();
@@ -131,7 +131,7 @@ function handleToDoSubmit(event) {
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-//* get To dos...
+// get To dos...
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
